@@ -18,6 +18,10 @@ reader = readline.createInterface {
   terminal: false
 }
 
+baseName  = path.basename(process.argv[2],'.dek')
+dirName   = path.dirname(process.argv[2])
+newFileName = "#{dirName}/#{baseName}"
+
 cards = []
 reader
   .on 'line', (line)->
@@ -33,9 +37,9 @@ reader
       card.splice(4,1)
       cards.push(card)
   .on 'close',()->
-    writeFile("#{path.dirname(process.argv[2])}/#{path.basename(process.argv[2],'.dek')}.dec",renderDec(cards))
-    writeFile("#{path.dirname(process.argv[2])}/#{path.basename(process.argv[2],'.dek')}-deckstats.txt", renderDeckStats(cards))
-    writeFile("#{path.dirname(process.argv[2])}/#{path.basename(process.argv[2],'.dek')}-BBCode.txt", renderBBCode(cards))
+    writeFile("#{newFileName}.dec",renderDec(cards))
+    writeFile("#{newFileName}-deckstats.txt", renderDeckStats(cards))
+    writeFile("#{newFileName}-BBCode.txt", renderBBCode(cards))
 
 writeFile = (location, text)->
   console.log "Writing #{location}..."
@@ -81,7 +85,7 @@ renderDeckStats = (cards)->
   return deckText
 
 renderBBCode = (cards)->
-  deckText = "[DECK= #{path.basename(process.argv[2],'.dek')}]\n"
+  deckText = "[DECK= #{baseName}]\n"
   sideArr = []
   deckArr = []
 
