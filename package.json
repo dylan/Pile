@@ -5,15 +5,32 @@
   "bin": {
     "pile": "./bin/pile.coffee"
   },
-  "engines" : {
-    "node" : ">=0.10.0"
+  "engines": {
+    "node": ">=0.10.0"
   },
   "dependencies": {
-    "coffee-script": "*"
+    "coffee-script": "*",
+    "optimist": "~0.6.0"
   },
   "author": "Dylan Wreggelsworth",
   "license": "MIT",
+  "preferGlobal": true,
   "devDependencies": {
+    "coffee-script": "*",
     "optimist": "~0.6.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dylan/Pile.git"
+  },
+  "keywords": [
+    "Magic The Gathering",
+    "MTG",
+    "Deck Converter",
+    "Converter",
+    "DEK"
+  ],
+  "bugs": {
+    "url": "https://github.com/dylan/Pile/issues"
   }
 }
