@@ -3,6 +3,16 @@ Pile
 
 A simple way to convert your MTGO DEK files to other popular formats.
 
+###Installation:
+```Bash
+$ npm install pile.coffee -g
+```
+
+###Usage:
+```Bash
+$ pile ~/path/to/mydeck.dek
+```
+
 ##Formats supported:
 
 ###In:
