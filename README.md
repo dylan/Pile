@@ -143,3 +143,8 @@ Sideboard
 2 Terror
 [/DECK]
 ```
+###TODO
+* Add other formats
+* Add the ability to specify a single format to export
+* Add the ability to specify the path you'd like to export to
+* Decouple and turn into a quick web service
