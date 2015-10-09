@@ -40,6 +40,7 @@ reader
     writeFile("#{newFileName}.dec",renderDec(cards))
     writeFile("#{newFileName}-deckstats.txt", renderDeckStats(cards))
     writeFile("#{newFileName}-BBCode.txt", renderBBCode(cards))
+    writeFile("#{newFileName}-CSV.csv", renderCsv(cards))
 
 writeFile = (location, text)->
   console.log "Writing #{location}..."
@@ -51,6 +52,25 @@ writeFile = (location, text)->
 
   console.log "Done."
 
+renderCsv = (cards) ->
+  deckText = "Count,Card,Sideboard,\n"
+  sideArr = []
+  deckArr = []
+
+  appendCard = (card)->
+    deckText += "\"#{card[1]}\",\"#{card[3]}\",\"false\",\n"
+
+  appendSbCard = (card)->
+    deckText += "\"#{card[1]}\",\"#{card[3]}\",\"true\",\n"
+
+  cards.forEach (card)->
+    if card[2] is "false" then deckArr.push(card) else sideArr.push(card)
+
+  deckArr.forEach(appendCard)
+  if sideArr.length > 0
+    sideArr.forEach(appendSbCard)
+
+  return deckText
 
 renderDec = (cards)->
   deckText = ""
@@ -102,3 +122,4 @@ renderBBCode = (cards)->
   deckText += "[/DECK]\n"
 
   return deckText
+
