@@ -143,6 +143,36 @@ Sideboard
 2 Terror
 [/DECK]
 ```
+**CSV**
+```
+Count,Card,Sideboard,
+"2","Aphetto Dredging","false",
+"4","Doom Blade","false",
+"4","Frenzy Sliver","false",
+"2","Terror","false",
+"4","Undying Evil","false",
+"4","Geth's Verdict","false",
+"3","Echoing Decay","false",
+"4","Predatory Sliver","false",
+"4","Muscle Sliver","false",
+"4","Virulent Sliver","false",
+"7","Swamp","false",
+"4","Swamp","false",
+"5","Forest","false",
+"3","Terramorphic Expanse","false",
+"4","Lotus Petal","false",
+"2","Unearth","false",
+"2","Naturalize","true",
+"2","Pyroblast","true",
+"2","Hydroblast","true",
+"2","Dust to Dust","true",
+"2","Plains","true",
+"1","Echoing Decay","true",
+"1","Island","true",
+"1","Mountain","true",
+"2","Terror","true",
+```
+
 ###TODO
 * Add other formats
 * Add the ability to specify a single format to export
