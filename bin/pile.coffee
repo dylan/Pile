@@ -53,15 +53,15 @@ writeFile = (location, text)->
   console.log "Done."
 
 renderCsv = (cards) ->
-  deckText = "sep=|\nCount|Card|Sideboard|\n"
+  deckText = "Count,Card,Sideboard,\n"
   sideArr = []
   deckArr = []
 
   appendCard = (card)->
-    deckText += "#{card[1]}|#{card[3]}|false|\n"
+    deckText += "\"#{card[1]}\",\"#{card[3]}\",\"false\",\n"
 
   appendSbCard = (card)->
-    deckText += "#{card[1]}|#{card[3]}|true|\n"
+    deckText += "\"#{card[1]}\",\"#{card[3]}\",\"true\",\n"
 
   cards.forEach (card)->
     if card[2] is "false" then deckArr.push(card) else sideArr.push(card)
