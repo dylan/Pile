@@ -1,6 +1,6 @@
 {
   "name": "pile.coffee",
-  "version": "0.5.1",
+  "version": "0.5.1.1",
   "description": "A converter from the MTGO DEK format to a few alternatives.",
   "bin": {
     "pile": "./bin/pile.coffee"
