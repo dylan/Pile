@@ -3,19 +3,19 @@ Pile
 
 A simple way to convert your MTGO DEK files to other popular formats.
 
-###Installation:
+### Installation:
 ```Bash
 $ npm install pile.coffee -g
 ```
 
-###Usage:
+### Usage:
 ```Bash
 $ pile ~/path/to/mydeck.dek
 ```
 
-##Formats supported:
+## Formats supported:
 
-###In:
+### In:
 
 **DEK** (MTGO Default export option)
 ```XML
@@ -51,7 +51,7 @@ $ pile ~/path/to/mydeck.dek
 </Deck>
 ```
 
-###Out:
+### Out:
 
 **DEC** (Decked Builder)
 ```
@@ -173,7 +173,7 @@ Count,Card,Sideboard,
 "2","Terror","true",
 ```
 
-###TODO
+### TODO
 * Add other formats
 * Add the ability to specify a single format to export
 * Add the ability to specify the path you'd like to export to
